@@ -20,6 +20,8 @@ Poplar brings together a collection of other tools and is designed to simplify t
 
 The recommended process for Linux installation is running `setup.sh`, which requires conda. This will create a conda environment `poplar_env` with the tools that can be installed through conda, as well as download the tools that are not installed with conda (BLAST, RAxML-NG, ASTRAL-Pro). The files will be downloaded to the current directory, and the paths will be added in the worker initialization through `parsl/config.py`.
 
+As an alternative, Docker may also be used for installation.
+
 ### Dependencies to run `setup.sh`:
 
 - [conda 23.11.0](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
@@ -58,6 +60,15 @@ The recommended process for Linux installation is running `setup.sh`, which requ
 - [pydot 3.0.1](https://github.com/erocarrera/pydot)
 
 Using other software versions may not work with Poplar.
+
+### Alternative Installation with Docker
+
+A dockerfile is included, which can be built and run using:
+
+```
+sudo docker build -t poplar_env_image .
+sudo docker run -it poplar_env_image
+```
 
 ## Parsl Configuration
 

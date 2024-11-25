@@ -5,4 +5,4 @@
 #SBATCH -p compute
 
 conda activate poplar_env
-python parsl/main.py ncbi_dataset/data/dataset_catalog.json out.tree
+python parsl/main.py ncbi_dataset/data/dataset_catalog.json -o out.tree
